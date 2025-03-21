@@ -19,5 +19,12 @@ public class UserService {
 	}
 	
 	// implement list user by id, save user and delete user
-
+	
+	public User saveUser(User user) {
+		return userRepo.save(user);
+	}
+	
+	public void deleteUser(long id) {
+		userRepo.deleteById(id);
+	}
 }
